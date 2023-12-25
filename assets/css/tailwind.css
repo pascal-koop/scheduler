@@ -1,0 +1,373 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border m-0 p-0 antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply lg:text-[120%];
+  @apply xl:text-[135%];
+  @apply 2xl:text-[150%];
+}
+
+.header {
+  @apply w-[100%] h-[5.06em] flex justify-start items-center border-b-[1px] border-solid border-b-gray-300;
+}
+
+.header-logo-image {
+  @apply pl-[1.52rem] w-[9.3rem];
+  @apply lg:w-[10.4rem];
+  @apply xl:w-[13rem];
+}
+
+.intro {
+  @apply h-[17.45rem] bg-cover bg-repeat bg-center border-b-[1px] border-solid border-b-gray-300;
+  @apply md:h-[28em];
+}
+
+.intro-inner {
+  @apply flex flex-col text-white break-words;
+  @apply md:w-[46em] md:mx-auto;
+}
+
+.intro-title {
+  @apply antialiased font-ubuntu font-extrabold text-[1.4em] uppercase text-center text-white
+         px-[3.35rem] pt-[2.5em];
+  @apply md:text-[3em];
+  @apply min-[1440px]:text-[4.5rem];
+  text-shadow: 0 2px 4px #000;
+}
+
+.intro-title::after {
+  @apply content-[''] block border-b-[5px] my-[.4rem] mx-auto w-[4rem] border-orange drop-shadow-none;
+  @apply md:my-[1.1rem] md:w-[9rem];
+  @apply lg:w-[10.81rem];
+  @apply xl:w-[13.5rem];
+}
+
+.intro-content {
+  @apply antialiased font-source-sans font-normal text-[1em] text-center leading-[1.5rem]
+         text-white break-normal px-[1.45em] pb-[3rem];
+  @apply md:leading-[1.75rem] md:text-[1.25rem] md:px-[1.875rem] md:pb-[3.75rem];
+  @apply lg:text-[1.5rem] lg:leading-[2.3rem];
+  @apply xl:text-[1.7rem];
+  @apply min-[1440px]:text-[1.875rem];
+  text-shadow: 0 2px 4px #000;
+}
+
+.arrow-down {
+  @apply h-0 w-0 border-x-[10px] border-x-transparent border-t-[#666] absolute left-2/4 pt-4 pb-4;
+  @apply md:top-[31rem];
+  @apply lg:top-[37rem];
+  @apply xl:top-[43rem];
+}
+
+.teaser {
+  @apply leading-[1.7em] border-b-[1px] border-solid border-b-gray-300 mt-[2rem] px-[1rem] pb-[1rem];
+}
+
+.teaser-content {
+  @apply antialiased font-source-sans font-normal text-[#666]
+         text-[1em] break-words mb-[1rem] mx-auto hyphens-auto leading-[1.7rem];
+  @apply md:leading-[1.7rem] md:px-[2.625rem];
+  @apply lg:leading-[1.87rem] lg:text-[1em] lg:mt-[2.4rem] md:w-[46em];
+  @apply xl:text-[1.5rem] xl:leading-[2.5rem] xl:mt-[3rem];
+}
+
+.date-picker {
+  @apply w-11/12 max-w-2xl mx-auto;
+}
+
+.date-picker-title {
+  @apply font-ubuntu font-normal text-[0.75rem] text-center mt-[2rem] text-gray-500 uppercase;
+  @apply lg:text-[0.9rem];
+  @apply xl:text-[1.125rem];
+}
+
+.date-picker-buttons {
+  @apply flex justify-between items-center font-source-sans font-bold break-normal mt-[1.9rem] mb-[1rem];
+
+  button {
+    @apply text-lg font-source-sans font-medium text-blue px-4 py-2 cursor-pointer underline;
+    @apply md:text-xl;
+    @apply lg:text-xl;
+  }
+}
+
+.date-picker-month {
+  @apply text-gray-500 text-lg font-ubuntu font-normal;
+  @apply md:text-2xl;
+}
+
+.date-picker-weekdays {
+  @apply grid grid-cols-7 gap-3 font-medium text-gray-500 text-center mb-3 font-source-sans;
+  @apply md:text-lg;
+  @apply lg:text-xl;
+  @apply xl:text-2xl;
+}
+
+.date-picker-date {
+  @apply grid grid-cols-7 gap-3 text-center font-source-sans mb-[2rem];
+}
+
+.day {
+  @apply flex justify-center items-center h-10 font-source-sans font-normal text-lg
+         border-2 border-solid border-blue rounded-[.5em] text-blue;
+  @apply md:text-xl md:p-7;
+}
+
+.day:hover {
+  @apply bg-orange border-orange text-white cursor-pointer;
+}
+
+.disabled {
+  @apply opacity-50  border-gray-400 text-gray-400;
+}
+
+.disabled:hover {
+  @apply bg-white border-gray-400 text-gray-400 cursor-text;
+}
+
+.time-slots {
+  @apply border-t-[1px] border-solid border-gray-300;
+}
+
+.time-slots-inner {
+  @apply justify-between items-center flex-col justify-items-center
+         grid grid-cols-2 gap-3 mx-auto  w-11/12 max-w-2xl mb-[2rem];
+  @apply md:grid md:grid-cols-3 md:gap-3 md:mx-auto md:w-11/12 md:max-w-2xl;
+}
+
+.time-slots-title {
+  @apply font-ubuntu font-normal text-[0.75rem] text-center mt-[2rem] mb-[1.9rem] col-span-2 text-gray-500 uppercase;
+  @apply md:col-span-3;
+  @apply lg:text-[0.9rem];
+  @apply xl:text-[1.125rem];
+}
+
+.time-slot-content {
+  @apply h-10 font-source-sans font-normal text-lg text-blue  w-5/6 max-w-lg my-2 flex justify-center items-center
+         border-2 border-solid border-blue rounded-[.5em];
+  @apply md:w-11/12;
+}
+
+.time-slot-content:hover {
+  @apply bg-orange border-orange text-white cursor-pointer;
+}
+
+.active {
+  @apply border-blue text-white bg-blue cursor-pointer;
+}
+
+.active:hover {
+  @apply border-blue bg-blue text-white;
+}
+
+.data-processing-link {
+  @apply font-source-sans font-semibold text-blue hover:text-blue;
+}
+
+.personal-information-form{
+  @apply border-t-[1px] border-solid border-gray-300;
+}
+
+.personal-information-form-inner{
+  @apply flex flex-col justify-between  items-stretch mx-auto  w-11/12 max-w-2xl mb-6;
+  @apply md:grid md:grid-cols-4 md:gap-6 md:mx-auto md:w-11/12 md:max-w-2xl;
+}
+
+.personal-information-title {
+  @apply font-ubuntu font-normal text-[0.75rem] text-center mt-[2rem] mb-[1.9rem] col-span-2 text-gray-500 uppercase;
+  @apply md:col-span-4;
+  @apply lg:text-[0.9rem];
+  @apply xl:text-[1.125rem];
+}
+
+.input-name {
+  @apply md:col-span-2;
+}
+
+.input-email {
+  @apply md:col-span-2;
+}
+
+.email-error-msg {
+  @apply text-red text-sm font-source-sans font-semibold;
+}
+
+.input-company {
+  @apply md:col-span-2;
+}
+
+.input-telephone {
+  @apply md:col-span-2;
+}
+
+.input-comment {
+  @apply md:col-span-4;
+}
+.input-required {
+  @apply text-blue;
+}
+
+.personal-information-input {
+  @apply h-14 w-full mb-3 p-3 font-source-sans  text-lg font-light border-2 border-solid border-gray-500
+         rounded-[.5em] focus:outline-none  focus:ring-0  focus:border-orange;
+  @apply md:col-span-1;
+}
+
+.personal-information-label {
+  @apply font-source-sans font-normal text-base text-black my-1 ml-2;
+  @apply md:text-lg  md:col-span-4 md:mb-4;
+  @apply 2xl:text-lg;
+}
+
+.input-comment-textarea {
+  @apply min-w-full h-56 font-source-sans text-lg  font-light border-2 border-solid border-gray-500 rounded-[.5em] mb-3 p-3
+         focus:outline-none  focus:ring-0  focus:border-orange;
+  resize: none;
+}
+
+.input-comment-textarea::placeholder {
+  @apply font-source-sans text-xl;
+}
+
+.data-processing-checkbox {
+  @apply flex justify-start items-center my-5 cursor-pointer;
+  @apply md:col-span-4;
+}
+
+#data-processing {
+  @apply opacity-0 absolute h-5 w-5 mr-3 cursor-pointer;
+}
+
+.data-processing-content {
+  @apply font-source-sans text-base text-black;
+  @apply md:text-lg;
+}
+
+.data-processing-information {
+  @apply md:col-span-4;
+}
+
+.data-processing-information-content {
+  @apply font-source-sans text-base text-gray-500 mt-0.5;
+  @apply md:text-lg;
+}
+
+.data-processing-information-content-link {
+  @apply text-blue underline;
+}
+
+.data-processing-information-content-link:hover {
+  @apply text-orange;
+}
+
+.send-button{
+  @apply grid grid-cols-4 gap-3 justify-items-center border-t-[1px] border-solid border-gray-300;
+}
+
+.send-button-content {
+  @apply flex justify-center col-start-2 col-end-4 w-[22rem] bg-orange border-orange text-white font-source-sans font-semibold text-lg
+         border-2 border-solid rounded-[.5em] px-4 py-2 mt-9 mb-3 z-[1];
+}
+
+.send-button-content:disabled,
+.send-button-content:disabled:hover {
+  @apply opacity-50 bg-gray-400 border-gray-400;
+}
+
+.user-has-send-form,
+.send-button-content:hover {
+  @apply bg-blue border-blue;
+}
+
+.user-has-send-form:hover {
+  @apply bg-blue border-blue;
+}
+
+.send-button-loading-spinner{
+  @apply inline-block text-blue relative left-[4rem] z-10;
+}
+
+.button-title{
+  @apply block z-[1];
+}
+
+.fetch-success-messages{
+  @apply grid grid-cols-4 gap-3 grid-rows-2 mt-3;
+  @apply md:grid-cols-4 md:gap-6 text-center;
+}
+
+.fetch-error-msg {
+  @apply text-red text-sm font-source-sans font-semibold col-start-2 col-end-4;
+}
+
+.fetch-success-msg-1{
+  @apply col-start-2 col-end-4 mt-6;
+  @apply text-gray-500 text-lg font-ubuntu font-normal;
+  @apply md:text-2xl;
+}
+
+.fetch-success-msg-2{
+  @apply antialiased font-source-sans font-normal text-gray-500
+         text-[1em] col-start-2 col-end-4;
+}
+
+.outer-data-processing-svg {
+  @apply bg-white border-2 rounded-[.4rem] border-blue w-7 h-7 flex flex-shrink-0 justify-center
+         items-center mr-6 focus-within:border-orange;
+}
+
+.inner-data-processing-svg {
+  @apply fill-current hidden w-3 h-3 text-orange;
+}
+
+.personal-information-input:checked + div {
+  @apply border-orange;
+}
+
+.personal-information-input:checked + div svg {
+  @apply block;
+}
+
+.slide-fade-enter-active {
+  @apply transition ease-out duration-500;
+}
+
+.slide-fade-leave-active {
+  @apply transition-all duration-[.8ms] ease-[cubic-bezier(1,0.5,0.8,1)];
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  @apply transform -translate-y-[77px] opacity-0;
+}
+
+.footer {
+  @apply flex flex-col justify-center items-center bg-gray-500 mt-[5rem] pt-4;
+  @apply md:pt-5;
+  @apply lg:pt-6;
+}
+
+.footer-link {
+  @apply inline-block text-white text-base font-source-sans font-normal px-4 py-2;
+  @apply md:text-base md:px-[4.5rem];
+  @apply lg:text-[1.2rem];
+  @apply xl:text-2xl;
+}
+
+.footer-link:hover {
+  @apply underline;
+}
+
+.footer-copyright {
+  @apply text-white text-base text-center font-source-sans font-normal my-4 py-4;
+  @apply md:text-base md:my-4 md:py-4;
+  @apply lg:text-[1.2rem];
+  @apply xl:text-2xl;
+}

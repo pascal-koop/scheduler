@@ -1,0 +1,33 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier", "no-loops"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "no-console": 2, //  2 this means error
+    "@typescript-eslint/no-explicit-any": "off",
+    "prettier/prettier": [
+      2,
+      {
+        "trailingComma": "es5"
+      }
+    ],
+    "object-curly-newline": ["error", { "multiline": true, "consistent": true }],
+    "no-loops/no-loops": 1, // 1 this means warning, do not affect the code
+    "comma-dangle": [
+      1,
+      {
+        "arrays": "never",
+        "objects": "always-multiline",
+        "imports": "never",
+        "exports": "never",
+        "functions": "never"
+      }
+    ]
+  }
+}
